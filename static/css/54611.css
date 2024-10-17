@@ -1,0 +1,53 @@
+.contact_button[data-v-b62fdcd0] {
+    background: #00aff0;
+    width: 42px;
+    height: 41px;
+    border-radius: 3px 0 0 3px;
+    position: fixed;
+    right: 0;
+    bottom: 25%;
+    z-index: 99;
+    transition: transform .3s;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700
+}
+
+.contact_button[data-v-b62fdcd0]:hover {
+    background: #0091ea;
+    color: #fff
+}
+
+.m-sidebar-visible .contact_button[data-v-b62fdcd0] {
+    transform: translateX(100%)
+}
+
+.m-black-body .contact_button[data-v-b62fdcd0] {
+    right: -42px
+}
+
+.contact_button .g-icon[data-v-b62fdcd0] {
+    width: 30px;
+    height: 30px;
+    flex: 0 0 30px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%
+}
+
+.contact_button.m-unread[data-v-b62fdcd0]:after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 1000px;
+    right: 5px;
+    top: 5px;
+    background: inherit;
+    border: 2px solid currentColor
+}
+
+.contact_button.m-translations[data-v-b62fdcd0] {
+    transform: translateY(45px)
+}
