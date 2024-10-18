@@ -23,7 +23,7 @@
     flex: 0;
     width: calc(100% - var(--scroll-bar-width));
 }
-@media (min-width: 1004px) {
+/* @media (min-width: 1004px) {
     .l-wrapper__sidebar:not(.m-disable-autoscroll) {
         pointer-events: none;
         scroll-behavior: smooth;
@@ -32,11 +32,11 @@
         scrollbar-width: none;
         scroll-behavior: auto;
     }
-}
+} */
 @media (max-width: 1004px) {
     .l-wrapper__sidebar {
         display: none;
-        /* flex: 1;
+        flex: 1;
         max-width: 368px;
         margin-left: 16px;
         z-index: 2;
@@ -45,7 +45,7 @@
         top: 0;
         overflow: auto;
         position: -webkit-sticky;
-        position: sticky; */
+        position: sticky;
         min-height: 100vh;
         min-height: calc(var(--vh, 1vh)* 100);
     }
