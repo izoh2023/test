@@ -33,9 +33,9 @@
         scroll-behavior: auto;
     }
 }
-@media (min-width: 1004px) {
+@media (max-width: 1004px) {
     .l-wrapper__sidebar {
-        display: flex;
+        display: none;
         /* flex: 1;
         max-width: 368px;
         margin-left: 16px;
@@ -50,9 +50,7 @@
         min-height: calc(var(--vh, 1vh)* 100);
     }
 }
-.l-wrapper__sidebar {
-    display: none;
-}
+
 
 
 @media (min-width: 1004px) {
