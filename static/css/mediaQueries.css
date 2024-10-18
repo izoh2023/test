@@ -37,7 +37,6 @@
 @media only screen and (max-width: 1004px) {
     .l-wrapper__sidebar {
         display: none;
-        overflow-x: hidden;
         /* flex: 1;
         max-width: 368px;
         margin-left: 16px;
@@ -50,6 +49,9 @@
         position: sticky;
         min-height: 100vh;
         min-height: calc(var(--vh, 1vh)* 100); */
+    }
+    body{
+        overflow-x: hidden;
     }
 }
 
