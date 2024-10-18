@@ -197,6 +197,50 @@
                 transition: opacity 0.4s; /* Optional smooth transition for showing */
             }
         </style>
+
+        <script>
+            // Function to apply styles based on media query
+function applyStylesBasedOnScreenSize() {
+    // Check if the screen width is 1004px or less
+    if (window.matchMedia("(max-width: 1004px)").matches) {
+        // Apply styles to the sidebar (uncomment the styles you need)
+        const sidebar = document.querySelector('.l-wrapper__sidebar');
+        if (sidebar) {
+            sidebar.style.display = "none";
+            sidebar.style.flex = "1";
+            sidebar.style.maxWidth = "368px";
+            sidebar.style.marginLeft = "16px";
+            sidebar.style.zIndex = "2";
+            sidebar.style.paddingTop = "16px";
+            sidebar.style.paddingBottom = "16px";
+            sidebar.style.top = "0";
+            sidebar.style.overflow = "auto";
+            sidebar.style.position = "sticky";  // You can also use '-webkit-sticky' here
+            sidebar.style.minHeight = "100vh";
+            sidebar.style.minHeight = "calc(var(--vh, 1vh) * 100)";
+        }
+
+        // Apply styles to the wrapperContent
+        const wrapperContent = document.getElementById('wrapperContent');
+        if (wrapperContent) {
+            wrapperContent.style.display = "flex";
+            wrapperContent.style.flexDirection = "column";
+        }
+
+        // Disable horizontal scrolling
+        document.documentElement.style.overflowX = "hidden";
+        document.body.style.overflowX = "hidden";
+    }
+}
+
+// Call the function on page load
+applyStylesBasedOnScreenSize();
+
+// Add event listener for window resize to trigger the function dynamically
+window.addEventListener('resize', applyStylesBasedOnScreenSize);
+        </script>
+
+       
     </head>
 
 <body data-app="true" class="m-ua-windows"  id="body-1">
@@ -320,7 +364,7 @@
         </header>
         <!-- the middle part -->
         <main id="content">
-        <div class="l-wrapper">
+        <div class="l-wrapper" id="wrapperContent">
             <div class="l-wrapper__holder-content" id="contentPane">
             <div class="l-wrapper__content">
                 <div data-v-ba1816e0="" class="b-compact-header g-sides-gaps js-compact-sticky-header"><!---->
@@ -741,66 +785,63 @@
         </div>
         <!---->
         </div>
-        </div>
-        <div data-v-39a6a486="" class="l-wrapper__sidebar" id="sideShow" style="height: 679px; position: sticky;">
-        <!----><!---->
-        <div data-v-39a6a486="" class="b-profile-list">
+            </div>
+            <div data-v-39a6a486="" class="l-wrapper__sidebar" id="sideShow" style="height: 679px; position: sticky;">
             <!----><!---->
-            <ul data-v-39a6a486="" class="b-profile__content__list m-end">
-            <!----><!----><!----><!----><!----><!----><!---->
-            <li data-v-39a6a486="" class="b-profile__content__item">
-                <div data-v-326179fd="" data-v-39a6a486="" class="list-offers m-offer-bottom-gap-reset mb-0">
-                <div data-v-326179fd="" class="b-offer-wrapper m-reset-mb">
-                    <div class="b-section-title m-row g-text-uppercase g-gray-text" style="font-weight: 600;"> 
-                    Subscription 
-                    </div>
-                    <div class="b-offer-join">
-                        
-                        <div class="b-offer-join__details m-break-word"  style="font-weight: 600;font-size: 16px; color: rgb(28, 27, 26); font-size: 18px; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;"> Limited offer - 85% off for 31 days! </div>
-                        
-                
-                    <div class="b-offer-join__bubble">
-                        <span data-v-38232c5a="" class="g-avatar m-border-line-theme m-absolute m-guest m-w36">
-                            <div data-v-325c6981="" data-v-38232c5a="" class="g-avatar__img-wrapper">
-                                <img data-v-325c6981="" src="../static/images/image2.jpg" alt="Summer Brookes ☀️" loading="lazy">
-                            <!----></div><!----><!----><!---->
+            <div data-v-39a6a486="" class="b-profile-list">
+                <!----><!---->
+                <ul data-v-39a6a486="" class="b-profile__content__list m-end">
+                <!----><!----><!----><!----><!----><!----><!---->
+                <li data-v-39a6a486="" class="b-profile__content__item">
+                    <div data-v-326179fd="" data-v-39a6a486="" class="list-offers m-offer-bottom-gap-reset mb-0">
+                    <div data-v-326179fd="" class="b-offer-wrapper m-reset-mb">
+                        <div class="b-section-title m-row g-text-uppercase g-gray-text" style="font-weight: 600;"> 
+                        Subscription 
+                        </div>
+                        <div class="b-offer-join">
+                            
+                            <div class="b-offer-join__details m-break-word"  style="font-weight: 600;font-size: 16px; color: rgb(28, 27, 26); font-size: 18px; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;"> Limited offer - 85% off for 31 days! </div>
+                            
+                    
+                        <div class="b-offer-join__bubble">
+                            <span data-v-38232c5a="" class="g-avatar m-border-line-theme m-absolute m-guest m-w36">
+                                <div data-v-325c6981="" data-v-38232c5a="" class="g-avatar__img-wrapper">
+                                    <img data-v-325c6981="" src="../static/images/image2.jpg" alt="Summer Brookes ☀️" loading="lazy">
+                                <!----></div><!----><!----><!---->
+                            </span>
+                            <div class="b-offer-join__bubble__text m-break-word">
+                                <div class="g-truncated-text m-markdown" style="font-size: 16px; font-family:Roboto, sans-serif; color: #333131;">☀️ 85% off only for 24 HOURS! Can't wait to show you my naughty side 😈💕</div><!---->
+                            </div></div>
+
+                        <br>
+                        <div role="button" class="openModalBtn m-rounded m-flex m-space-between m-lg g-btn" id="subscribe-1"><!----><span class="b-wrap-btn-text m-notice">
+                            <span class="b-btn-text" style="font-weight: 600;">
+                            Subscribe
                         </span>
-                        <div class="b-offer-join__bubble__text m-break-word">
-                            <div class="g-truncated-text m-markdown" style="font-size: 16px; font-family:Roboto, sans-serif; color: #333131;">☀️ 85% off only for 24 HOURS! Can't wait to show you my naughty side 😈💕</div><!---->
-                        </div></div>
+                        <span class="b-btn-text__small" style="font-weight: 600;">
+                            $3 for 31 days
+                        </span></span></div>
+                        <br>
 
-                    <br>
-                    <div role="button" class="openModalBtn m-rounded m-flex m-space-between m-lg g-btn" id="subscribe-1"><!----><span class="b-wrap-btn-text m-notice">
-                        <span class="b-btn-text" style="font-weight: 600;">
-                        Subscribe
-                    </span>
-                    <span class="b-btn-text__small" style="font-weight: 600;">
-                        $3 for 31 days
-                    </span></span></div>
-                    <br>
-
-                    <span class="b-users__item__subscription-date__label"> Regular price $20 /month </span>
+                        <span class="b-users__item__subscription-date__label"> Regular price $20 /month </span>
+                        </div>
                     </div>
-                </div>
-        <!---->
-        </div>
-        </li>
-        <!---->
-        </ul>
-        </div>
-        <!---->
-        <div data-v-6a4bed29="" data-v-39a6a486="" class="l-footer m-items-with-divider">
-        <nav data-v-6a4bed29="" class="l-footer__menu">
-            <a data-v-6a4bed29="" href="https://onlyfans.com/privacy" class="l-footer__menu__item" target="_blank"> Privacy </a>
-            <a data-v-6a4bed29="" href="https://onlyfans.com/cookies" class="l-footer__menu__item" target="_blank"> Cookie Notice </a>
-            <a data-v-6a4bed29="" href="https://onlyfans.com/terms-of-service" class="l-footer__menu__item" target="_blank"> Terms of Service </a>
-        </nav>
-        </div>
-        </div>
-        <div data-v-25eb7699="">
-
-        <!----><!---->
-        </div>
+            <!---->
+            </div>
+            </li>
+            <!---->
+            </ul>
+            </div>
+            <!---->
+            <div data-v-6a4bed29="" data-v-39a6a486="" class="l-footer m-items-with-divider">
+            <nav data-v-6a4bed29="" class="l-footer__menu">
+                <a data-v-6a4bed29="" href="https://onlyfans.com/privacy" class="l-footer__menu__item" target="_blank"> Privacy </a>
+                <a data-v-6a4bed29="" href="https://onlyfans.com/cookies" class="l-footer__menu__item" target="_blank"> Cookie Notice </a>
+                <a data-v-6a4bed29="" href="https://onlyfans.com/terms-of-service" class="l-footer__menu__item" target="_blank"> Terms of Service </a>
+            </nav>
+            </div>
+            </div>
+    
         <!---->
         </div>
         <!---->
