@@ -316,7 +316,7 @@ div>div:not(.b-post__text):not(.post_voting)~.b-post__unknown .b-subscribe-block
 
 .l-header__menu[data-v-bc0d59dc] {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 56px
 }
 
