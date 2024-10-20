@@ -1,9 +1,5 @@
-@media (max-width: 499.98px) and (orientation: portrait) {
-    @supports (padding-bottom:env(safe-area-inset-bottom)) {
-        .l-header[data-v-bc0d59dc] {
-            padding-bottom: env(safe-area-inset-bottom);
-        }
-    }
+/* @media (max-width: 499.98px) and (orientation: portrait) {
+    
 }
 @media (max-width: 499.98px) {
     .l-header[data-v-bc0d59dc] {
@@ -76,4 +72,4 @@
 .l-wrapper__content {
     max-width: 100%;
    
-}
+} */
