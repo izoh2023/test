@@ -318,6 +318,7 @@ div>div:not(.b-post__text):not(.post_voting)~.b-post__unknown .b-subscribe-block
     display: flex;
     justify-content: space-evenly;
     height: 45px;
+    max-width:350px;
 }
 
 @media (max-width: 499.98px) {
